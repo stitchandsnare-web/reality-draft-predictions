@@ -658,7 +658,7 @@ export default function App() {
   }, []);
 
   const showToast = (msg) => { setToast(msg); setTimeout(() => setToast(null), 3000); };
-  const handleLogin = async () => { await supabase.auth.signInWithOAuth({ provider: "google", options: { redirectTo: window.location.href } }); };
+  const handleLogin = async () => { await supabase.auth.signInWithOAuth({ provider: "google", options: { redirectTo: "https://stitchandsnare-web.github.io/reality-draft-predictions/" } }); };
   const handleSignOut = async () => { await supabase.auth.signOut(); setSession(null); };
 
   const isAdmin = session?.user?.email === ADMIN_EMAIL;
