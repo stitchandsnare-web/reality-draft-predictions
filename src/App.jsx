@@ -14,8 +14,8 @@ const css = `
     --gold:    #DBBC6C;
     --gold-dim:#b89a4a;
     --surface: #0e0818;
-    --card:    #1a1030;
-    --border:  rgba(102,68,190,0.25);
+    --card:    #1e1535;
+    --border:  rgba(255,255,255,0.12);
     --border-bright: rgba(219,188,108,0.4);
     --mid:     #9b8ec4;
     --green:   #2ECC71;
@@ -158,12 +158,12 @@ const css = `
   .options-grid { display: flex; flex-direction: column; gap: 8px; }
   .option-btn {
     display: flex; align-items: center; gap: 10px; padding: 11px 14px;
-    border: 1px solid rgba(102,68,190,0.2); border-radius: 10px;
-    background: rgba(52,37,104,0.2); cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.15); border-radius: 10px;
+    background: rgba(255,255,255,0.05); cursor: pointer;
     font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500;
-    color: rgba(255,255,255,0.8); transition: all 0.15s; text-align: left; width: 100%;
+    color: rgba(255,255,255,0.9); transition: all 0.15s; text-align: left; width: 100%;
   }
-  .option-btn:hover:not(.locked-opt) { border-color: var(--violet); background: rgba(102,68,190,0.25); color: white; }
+  .option-btn:hover:not(.locked-opt) { border-color: var(--gold); background: rgba(219,188,108,0.08); color: white; }
   .option-btn.selected {
     background: linear-gradient(135deg, rgba(64,11,47,0.8), rgba(52,37,104,0.8));
     border-color: var(--gold); color: var(--gold); font-weight: 600;
