@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { supabase } from "./supabase.js";
 
-const ADMIN_EMAIL = "steven.sparacino@bol-agency.com";
+const ADMIN_EMAILS = ["steven.sparacino@bol-agency.com", "katemlight@gmail.com"];
 
 const css = `
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap');
@@ -661,7 +661,7 @@ export default function App() {
   const handleLogin = async () => { await supabase.auth.signInWithOAuth({ provider: "google", options: { redirectTo: "https://stitchandsnare-web.github.io/reality-draft-predictions/" } }); };
   const handleSignOut = async () => { await supabase.auth.signOut(); setSession(null); };
 
-  const isAdmin = session?.user?.email === ADMIN_EMAIL;
+  const isAdmin = ADMIN_EMAILS.includes(session?.user?.email);
   const userName = session?.user?.user_metadata?.full_name || session?.user?.email || "";
 
   if (authLoading) return <div className="loading">Las Culturitas</div>;
