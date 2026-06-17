@@ -692,7 +692,7 @@ export default function App() {
     <div className="app">
       {toast && <div className="toast">{toast}</div>}
       <div className="topbar">
-        <div className="topbar-brand">Las Culturitas</div>
+        <div className="topbar-brand">Las Culturistas</div>
         <div className="topbar-nav">
           <button className={`nav-btn${tab === "predictions" ? " active" : ""}`} onClick={() => setTab("predictions")}>Picks</button>
           <button className={`nav-btn${tab === "leaderboard" ? " active" : ""}`} onClick={() => setTab("leaderboard")}>Scores</button>
