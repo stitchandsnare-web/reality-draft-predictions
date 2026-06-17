@@ -332,6 +332,13 @@ const css = `
     .nav-btn { padding: 5px 8px; font-size: 11px; }
     .predictions-page, .leaderboard-page, .admin-page { padding-left: 12px; padding-right: 12px; }
     .page-hero, .lb-hero, .admin-hero { padding: 20px 16px; }
+    .question-admin-header { flex-direction: column; gap: 8px; }
+    .delete-btn { align-self: flex-end; padding: 8px 14px; font-size: 13px; }
+    .answer-select { width: 100%; font-size: 16px; padding: 10px 12px; }
+    .mark-btn { width: 100%; padding: 12px; font-size: 14px; border-radius: 10px; margin-top: 4px; }
+    .admin-submit-btn { width: 100%; padding: 14px; font-size: 15px; }
+    .options-list { gap: 8px; }
+    .option-tag { font-size: 12px; padding: 6px 12px; }
     .question-card { padding: 16px; }
     .option-btn { font-size: 12px; padding: 10px 12px; }
     .lb-row { padding: 12px 14px; gap: 10px; }
@@ -506,7 +513,7 @@ const AdminPanel = ({ onToast }) => {
               ))}
             </div>
             {!q.correct_answer ? (
-              <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 8, width: '100%' }}>
                 <select className="answer-select" value={answerSelections[q.id] || ""} onChange={(e) => setAnswerSelections(s => ({ ...s, [q.id]: e.target.value }))}>
                   <option value="">Select correct answer...</option>
                   {(q.options || []).map(opt => <option key={opt} value={opt}>{opt}</option>)}
