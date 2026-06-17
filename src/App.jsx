@@ -369,12 +369,12 @@ const Leaderboard = ({ currentUserId }) => {
   }, []);
 
   const max = entries[0]?.score || 1;
-  if (loading) return <div className="loading">Las Culturitas</div>;
+  if (loading) return <div className="loading">Las Culturistas</div>;
   return (
     <div className="leaderboard-page">
       <div className="lb-hero">
         <div className="lb-title">Leaderboard</div>
-        <div className="lb-meta"><span className="live-dot" /><span>Live · Las Culturitas 2026</span></div>
+        <div className="lb-meta"><span className="live-dot" /><span>Live · Las Culturistas 2026</span></div>
       </div>
       {entries.length === 0 && (
         <div className="empty-state">
@@ -580,14 +580,14 @@ const PredictionsView = ({ session, onToast }) => {
   const answeredCount = Object.keys(picks).length;
   const pct = questions.length > 0 ? Math.round((answeredCount / questions.length) * 100) : 0;
 
-  if (loading) return <div className="loading">Las Culturitas</div>;
+  if (loading) return <div className="loading">Las Culturistas</div>;
 
   return (
     <>
       <div className="predictions-page">
         <div className="page-hero">
           <div className="page-title">Your Predictions</div>
-          <div className="page-meta">Las Culturitas Culture Awards 2026</div>
+          <div className="page-meta">Las Culturista Culture Awards 2026</div>
           <div className="page-progress">
             <div className="progress-label">{answeredCount} of {questions.length} answered · {pct}%</div>
             <div className="progress-bar"><div className="progress-fill" style={{ width: `${pct}%` }} /></div>
@@ -671,14 +671,14 @@ export default function App() {
   const isAdmin = ADMIN_EMAILS.includes(session?.user?.email);
   const userName = session?.user?.user_metadata?.full_name || session?.user?.email || "";
 
-  if (authLoading) return <div className="loading">Las Culturitas</div>;
+  if (authLoading) return <div className="loading">Las Culturistas</div>;
 
   if (!session) {
     return (
       <div className="landing">
         <div className="landing-inner">
           <div className="landing-eyebrow">Bravo · Culture Awards · 2026</div>
-          <div className="landing-title">Las<br /><span>Culturitas</span></div>
+          <div className="landing-title">Las<br /><span>Culturistas</span></div>
           <div className="landing-year">✦ ✦ ✦</div>
           <div className="landing-divider" />
           <div className="landing-sub">Make your predictions for the most dramatic night in reality TV. Sign in with Google to play.</div>
